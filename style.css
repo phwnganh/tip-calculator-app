@@ -1,0 +1,61 @@
+body{
+    font-family: var(--font-family);
+    background-color: var(--grey-200);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+main{
+
+    border-radius: 25px;
+
+    background-color: white;
+    padding: 32px 40px;
+    gap: 48px;
+}
+
+.calc-number-entering,.calc-result{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.calc-number-entering--bill-inputting{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.bill-inputting--label, .calc-result--label{
+    color: var(--grey-500);
+    font-size: var(--text-5-font-size);
+    line-height: var(--text-5-line-height);
+    font-weight: bold;
+}
+
+#bill-inputting--dollar{
+    background-color: var(--grey-50);
+    outline: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    border: 1px solid var(--grey-50);
+
+}
+
+#bill-inputting--dollar::placeholder{
+    color: var(--grey-300);
+}
+
+.calc-result--checkbox{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.calc-result-checkbox--item{
+    border-radius: 5px;
+    background-color: var(--green-900);
+}

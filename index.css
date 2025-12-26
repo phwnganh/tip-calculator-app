@@ -1,0 +1,45 @@
+:root{
+    --grey-50: #F3F9FA;
+    --grey-200: #C5E4E7;
+    --grey-300: #9EBBBD;
+    --grey-400: #7F9D9F;
+    --grey-500: #5E7A7D;
+    --grey-550: #547878;
+    --grey-600: #3D6666;
+
+    --green-200: #9FE8DF;
+    --green-400: #26C2AE;
+    --green-750: #0D686D;
+    --green-800: #085C61;
+    --green-900: #00474B;
+
+    --orange-400: #E17052;
+
+    /*text-preset-1*/
+    --text-1-size: 48px;
+    --text-1-line-height: 71px;
+    --text-1-letter-spacing: -1px;
+
+    /*text-preset-2*/
+    --text-2-font-size: 32px;
+    --text-2-line-height: 47px;
+    --text-2-letter-spacing: -0.67px;
+
+    /*text-preset-3*/
+    --text-3-font-size: 24px;
+    --text-3-line-height: 36px;
+
+    /*text-preset-4*/
+    --text-4-font-size: 20px;
+    --text-4-line-height: 30px;
+
+    /*text-preset-5*/
+    --text-5-font-size: 16px;
+    --text-5-line-height: 24px;
+
+    /*text-preset-6*/
+    --text-6-font-size: 13px;
+    --text-6-line-height: 19px;
+
+    --font-family: "Space Mono", san-serif;
+}
