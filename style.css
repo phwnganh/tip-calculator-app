@@ -30,7 +30,7 @@ main{
     width: 100%;
 }
 
-.calc-number-entering--bill{
+.calc-number-entering--bill, .calc-tip, .calc-people{
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -148,4 +148,18 @@ main{
     line-height: var(--text-4-line-height);
     padding: 9px 40px;
     margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    main{
+        flex-direction: column;
+    }
+
+    .calc-number-entering{
+        gap: 24px;
+    }
+
+    .calc-number-result{
+        gap: 8px;
+    }
 }
