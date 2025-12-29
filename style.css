@@ -51,7 +51,10 @@ main{
     border: 1px solid var(--grey-50);
     width: 100%;
     text-align: right;
+}
 
+#calc-number-entering-bill-number--inputting:focus, #calc-people-number--inputting:focus{
+    outline: 2px solid var(--green-400);
 }
 
 #calc-number-entering-bill-number--inputting::placeholder, #calc-people-number--inputting::placeholder{
@@ -74,6 +77,21 @@ main{
     color: white;
     font-weight: bold;
     padding: 6px 10px;
+}
+
+.calc-tip-checkbox--item:hover{
+    background-color: var(--green-400);
+    color: var(--green-900);
+}
+
+.calc-tip-checkbox--item:active{
+    background-color: var(--green-200);
+    color: var(--green-900);
+}
+
+.calc-tip-checkbox--item:last-child{
+    background-color: var(--grey-50);
+    color: var(--grey-550);
 }
 
 .calc-people--number, .calc-number-entering-bill--number{
@@ -148,6 +166,10 @@ main{
     line-height: var(--text-4-line-height);
     padding: 9px 40px;
     margin-top: auto;
+}
+
+.calc-number-result-btn--reset:hover{
+    background-color: var(--green-200);
 }
 
 @media (max-width: 768px) {
