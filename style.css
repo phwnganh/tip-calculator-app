@@ -1,15 +1,21 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body{
     font-family: var(--font-family);
     background-color: var(--grey-200);
     display: flex;
     justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    max-width: 920px;
-    margin: 0 auto;
 }
 
 main{
-
+    max-width: 920px;
+    width: 100%;
     border-radius: 25px;
     display: flex;
     background-color: white;
@@ -17,10 +23,11 @@ main{
     gap: 48px;
 }
 
-.calc-number-entering,.calc-tip{
+.calc-number-entering{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    width: 100%;
 }
 
 .calc-number-entering--bill{
@@ -66,6 +73,7 @@ main{
     line-height: var(--text-3-line-height);
     color: white;
     font-weight: bold;
+    padding: 6px 10px;
 }
 
 .calc-people--number, .calc-number-entering-bill--number{
@@ -85,8 +93,59 @@ main{
 .calc-number-result{
     background-color: var(--green-900);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 15px;
+    width: 100%;
+    padding: 40px;
 }
 
+.calc-number-result--tip-amount, .calc-number-result--total{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
 
+.calc-number-result-tip-amount-label{
+    display: flex;
+    flex-direction: column;
+}
+
+.calc-number-result-tip-amount-label--title, .calc-number-result-total-label--title{
+    color: white;
+    font-size: var(--text-5-font-size);
+    line-height: var(--text-5-line-height);
+    font-weight: bold;
+}
+
+.calc-number-result-tip-amount-label--per-person, .calc-number-result-total-label--per-person{
+    color: var(--grey-400);
+    font-size: var(--text-6-font-size);
+    line-height: var(--text-6-line-height);
+    font-weight: bold;
+}
+
+.calc-number-result-tip-amount--dollar, .calc-number-result-total--dollar{
+    color: var(--green-400);
+    font-size: var(--text-1-size);
+    line-height: var(--text-1-line-height);
+    font-weight: bold;
+    justify-self: end;
+}
+
+.calc-number-result-btn--reset{
+    border-radius: 5px;
+    background-color: var(--green-400);
+    border: var(--green-400);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--green-900);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: var(--text-4-font-size);
+    line-height: var(--text-4-line-height);
+    padding: 9px 40px;
+    margin-top: auto;
+}
