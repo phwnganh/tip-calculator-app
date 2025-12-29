@@ -163,3 +163,25 @@ main{
         gap: 8px;
     }
 }
+
+@media (max-width: 576px) {
+    .calc-number-entering{
+        gap: 32px;
+    }
+
+    .calc-tip--checkbox{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .calc-number-result{
+        padding: 24px;
+    }
+
+    .calc-number-result-tip-amount--dollar, .calc-number-result-total--dollar{
+        font-size: 32px;
+
+    }
+
+    .calc-number-result-btn--reset{
+        padding: 9px 32px;
+    }
+}
