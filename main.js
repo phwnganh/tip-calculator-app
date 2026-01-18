@@ -6,6 +6,8 @@ const totalResult = document.querySelector('.calc-number-result-total--dollar');
 
 const peopleError = document.querySelector('.calc-people--label p:last-child');
 const resetBtn = document.querySelector('.calc-number-result-btn--reset');
+
+resetBtn.disabled = true;
 peopleError.style.display = 'none';
 
 let billValue = 0;
@@ -19,6 +21,11 @@ const validatingPeople = () => {
     }
     peopleError.style.display = 'none';
     return true;
+}
+
+const updateResetButtonState = () => {
+    const hasValue = billValue > 0 || peopleValue > 0 || tipValue > 0;
+    resetBtn.disabled = !hasValue;
 }
 
 const calculateResult = () => {
@@ -38,6 +45,7 @@ const calculateResult = () => {
 billInputting.addEventListener('input', () => {
     billValue = Number(billInputting.value);
     calculateResult();
+    updateResetButtonState();
 })
 
 // add event listener tip checkboxes
@@ -50,6 +58,7 @@ tipCheckboxes.forEach(tipCheckbox => {
 
         tipValue = Number(tipCheckbox.textContent.replace("%", ""));
         calculateResult();
+        updateResetButtonState();
     })
 })
 
@@ -57,6 +66,7 @@ tipCheckboxes.forEach(tipCheckbox => {
 peopleInputting.addEventListener('input', () => {
     peopleValue = Number(peopleInputting.value);
     calculateResult();
+    updateResetButtonState();
 })
 
 resetBtn.addEventListener('click', () => {
@@ -72,4 +82,5 @@ resetBtn.addEventListener('click', () => {
     tipAmountResult.textContent = '$0.00';
     totalResult.textContent = '$0.00';
     peopleError.style.display = 'none';
+    updateResetButtonState();
 })

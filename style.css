@@ -189,6 +189,11 @@ main{
     background-color: var(--green-200);
 }
 
+.calc-number-result-btn--reset:disabled{
+    cursor: not-allowed;
+    background-color: var(--green-750);
+}
+
 @media (max-width: 768px) {
     main{
         flex-direction: column;
